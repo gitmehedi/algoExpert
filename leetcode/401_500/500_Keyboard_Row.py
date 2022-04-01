@@ -40,13 +40,25 @@ class Solution:
         fr = "qwertyuiop"
         sr = "asdfghjkl"
         tr = "zxcvbnm"
-        for val in words:
-            pass
+        ls = []
+        for rec in words:
+            val = rec.lower()
+            fr_len = list(filter(lambda x: x in fr, val))
+            sr_len = list(filter(lambda x: x in sr, val))
+            tr_len = list(filter(lambda x: x in tr, val))
+
+            if len(fr_len) == len(val):
+                ls.append(rec)
+            if len(sr_len) == len(val):
+                ls.append(rec)
+            if len(tr_len) == len(val):
+                ls.append(rec)
+        return ls
 
 
 words = ["Hello", "Alaska", "Dad", "Peace"]
-# words = ["omk"]
-# words = ["adsdf", "sfd"]
+words = ["omk"]
+words = ["adsdf", "sfd"]
 obj = Solution()
 result = obj.findWords(words)
 print(result)
