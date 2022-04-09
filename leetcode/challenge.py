@@ -16,43 +16,63 @@
 #     out.write(fl)
 #
 # print("File was saved in %s " % protected_file)
-from typing import List
+# from typing import List
+#
+# class Solution:
+#     def subsets(self, nums: List[int]) -> List[List[int]]:
+#         n = len(nums)
+#         output = [[]]
+#
+#         for num in nums:
+#             newarr = [curr + [num] for curr in output]
+#             output += newarr
+#
+#
+#         return output
+#
+#     def permutaltion(self,n):
+#         output = [[]]
+#         for num in range(n):
+#             marr = [out + [num] for out in output]
+#             output +=marr
+#         return len(output) - 1
+#
+#     def removeDuplicateLetters(self, s: str) -> str:
+#         output = []
+#         for out in s:
+#             if out not in output:
+#                 output.append(out)
+#             else:
+#                 output.remove(out)
+#                 output.append(out)
+#
+#         # output.sort()
+#         return "".join
+#
+# m = Solution()
+# lis = [1,2,3,4,5,6]
+# # print(m.subsets(lis))
+# # print(m.permutaltion(3))
+#
+# s = "cbacdcbc"
+# m.removeDuplicateLetters(s)
 
-class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        n = len(nums)
-        output = [[]]
-
-        for num in nums:
-            newarr = [curr + [num] for curr in output]
-            output += newarr
+a = list(range(0, 16))
 
 
-        return output
+def childnode(depth):
+    return 2 * depth + 1, 2 * depth + 2
 
-    def permutaltion(self,n):
-        output = [[]]
-        for num in range(n):
-            marr = [out + [num] for out in output]
-            output +=marr
-        return len(output) - 1
 
-    def removeDuplicateLetters(self, s: str) -> str:
-        output = []
-        for out in s:
-            if out not in output:
-                output.append(out)
-            else:
-                output.remove(out)
-                output.append(out)
+def traverse(a, i=0, depth=0):
+    if i >= len(a):
+        return False
+    l, r = childnode(i)
+    depth += 1
+    traverse(a, l, depth)
+    print("   " * depth + str(a[i]))
+    traverse(a, r, depth)
 
-        # output.sort()
-        return "".join
 
-m = Solution()
-lis = [1,2,3,4,5,6]
-# print(m.subsets(lis))
-# print(m.permutaltion(3))
 
-s = "cbacdcbc"
-m.removeDuplicateLetters(s)
+traverse(a)
