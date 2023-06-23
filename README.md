@@ -3,8 +3,13 @@ Data Structure and Algorithms
 
 - [Data Structure and Algorithms](#data-structure-and-algorithms)
 - [Algorithms](#algorithms)
-    - [Tree Algorithms](#tree-algorithms)
-        - [References](#references)
+  - [Tree Algorithms](#tree-algorithms)
+    - [Types of Tree Data Structure](#types-of-tree-data-structure)
+      - [Binary Tree](#binary-tree)
+      - [Binary Search Tree (BST)](#binary-search-tree-bst)
+      - [AVL Tree](#avl-tree)
+      - [B-Tree](#b-tree)
+    - [References](#references)
 
 ## Algorithms
 
