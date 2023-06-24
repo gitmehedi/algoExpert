@@ -3,13 +3,20 @@ Data Structure and Algorithms
 
 - [Data Structure and Algorithms](#data-structure-and-algorithms)
 - [Algorithms](#algorithms)
+  - [Linked Lists](#linked-lists)
+    - [Advantage](#advantage)
+    - [Disadvantage](#disadvantage)
+    - [Operations](#operations)
+    - [References](#references)
+    - [Time Complexity](#time-complexity)
+    - [Application](#application)
   - [Tree Algorithms](#tree-algorithms)
     - [Types of Tree Data Structure](#types-of-tree-data-structure)
       - [Binary Tree](#binary-tree)
       - [Binary Search Tree (BST)](#binary-search-tree-bst)
       - [AVL Tree](#avl-tree)
       - [B-Tree](#b-tree)
-    - [References](#references)
+    - [References](#references-1)
 
 ## Algorithms
 
@@ -132,6 +139,9 @@ def delete(self, value):
 - Traversal
 - Sort
 - Search
+#### References
+- https://www.tutorialspoint.com/python_data_structure/python_linked_lists.htm#
+- https://www.freecodecamp.org/news/introduction-to-linked-lists-in-python/
 
 #### Time Complexity
 ![Linked List Time Complexity](./images/linked_list_time_complexity.png)
@@ -245,9 +255,7 @@ B tree is a self-balancing search tree wherein each node can contain more than o
 
 
 #### References
-
 - https://www.shiksha.com/online-courses/articles/tree-data-structures-types-properties-and-applications/
-- 
 
 
 
