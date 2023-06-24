@@ -1,65 +1,69 @@
-def getNthFib(n):
-    a, b = 0, 1
-    fib = []
-    fib.append(a)
-    fib.append(b)
-    for i in range(n - 2):
-        c = a + b
-        a, b = b, c
-        fib.append(c)
-
-    return fib[n-1]
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
 
 
-print(getNthFib(2))
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+
+    def insert(self, value, position):
+        pass
+
+    def delete(self, value):
+        current = self.head
+
+        if current.data == value:
+            self.head = current.next
+        else:
+            while current:
+                if current.data == value:
+                    break
+                prev = current
+                current = current.next
+
+            if current == None:
+                return
+            prev.next = current.next
+            current = None
+
+    def traverse(self):
+        pass
+
+    def sort(self):
+        pass
+
+    def search(self, value):
+        pass
+
+    def print_list(self):
+        vals = []
+        current = self.head
+        while current:
+            vals.append(current.data)
+            current = current.next
+        print(vals)
 
 
+linked_list = LinkedList()
 
+list_val = [90, 23, 7, 23, 91, 34, 23, 'Bangladesh', 'India', 'Japan', 12]
+for val in list_val:
+    linked_list.append(val)
 
-
-
-# def solution(word, cipher):
-#     ciword = []
-#     alphabet = 'abcdefghijklmnopqrstuvwxyz'
-#     if len(set(cipher)) != len(cipher):
-#         return ""
-#
-#     for ind, w in enumerate(word):
-#         if alphabet.find(w) and cipher.find(w) > -1:
-#             ciword.append(cipher[alphabet.find(w)])
-#         else:
-#             return ""
-#
-#     return "".join(ciword)
-#
-#
-# word = 'helloworld'
-# cipher = 'ofwsujkizntphbxycamreqvlgd'
-# respose = solution(word, cipher)
-# print(respose)
-# rkwwjojnwz
-# def fibo(num):
-#     fib = []
-#     n1, n2 = 0, 1
-#     for i in range(2, num):
-#         n3 = n1 + n2
-#         n1, n2 = n2, n3
-#         if isPrime(n3):
-#             fib.append(n3)
-#     return fib
-#
-#
-# def isPrime(n):
-#     if n < 2:
-#         return False
-#     elif n == 2:
-#         return True
-#     else:
-#         for i in range(2, n):
-#             if (n % i) == 0:
-#                 return False
-#         return True
-#
-#
-# num = 7
-# print(fibo(num))
+linked_list.print_list()
+linked_list.delete(7)
+linked_list.delete(90)
+linked_list.delete(12)
+linked_list.print_list()

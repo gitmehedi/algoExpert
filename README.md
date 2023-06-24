@@ -18,6 +18,129 @@ important part of several computer algorithms and programs.
 
 Types of Algorithms are listed below.
 
+### Linked Lists
+
+Linked Lists are a data structure that store data in the form of a chain. The structure of a linked list is such that each piece of data has a connection to the next one (and sometimes the previous data as well). Each element in a linked list is called a node.
+
+#### Advantage
+- Because of the chain-like system of linked lists, you can add and remove elements quickly. This also doesn't require reorganizing the data structure unlike arrays or lists. Linear data structures are often easier to implement using linked lists.
+- Linked lists also don't require a fixed size or initial size due to their chainlike structure.
+
+#### Disadvantage
+- More memory is required when compared to an array. This is because you need a pointer (which takes up its own memory) to point you to the next element.
+- Search operations on a linked list are very slow. Unlike an array, you don't have the option of random access.
+
+#### Operations
+You just have to realize that every item that you will be adding to the list is just a node (similar to a ring in a chain). What differentiates the head (which is the first node in the list) is that you gave it the title head, and then you started adding other nodes to it.
+
+- Create Master Node
+So let's create the nodes first:
+```python
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+```
+> `data` value added to linked list  
+> `next` next node added to list
+
+![ScreenShot](./images/linked_list.png)
+
+To add other operations like add a new node (append,insert) or delete an existing node we need to define a different class
+```python
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, value):
+        pass
+
+    def insert(self, value, position):
+        pass
+
+    def delete(self, value):
+        pass
+
+    def traverse(self):
+        pass
+
+    def sort(self):
+        pass
+
+    def search(self, value):
+        pass
+
+    def print_list(self):
+        current = self.head
+        while current:
+            print(current.data)
+            current = current.next
+            
+# Define and start operations
+
+linked_list = LinkedList()
+
+list_val = [90, 23, 7, 23, 91, 34, 23, 'Bangladesh', 'India', 'Japan', 12]
+for val in list_val:
+    linked_list.append(val)
+
+linked_list.print_list()
+```
+
+- **Add New Elements**  
+New elements can be added to linked list using two ways:
+
+**_INSERT_**: insert values at a specific position in the linked list
+```python
+
+```
+
+**_APPEND_**: insert values at the end of the linked list
+
+```python
+def append(self, value):
+    new_node = Node(value)
+    if self.head is None:
+        self.head = new_node
+    else:
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+```
+- Delete Existing Elements
+
+```python
+def delete(self, value):
+    current = self.head
+
+    if current.data == value:
+        self.head = current.next
+    else:
+        while current:
+            if current.data == value:
+                break
+            prev = current
+            current = current.next
+
+        if current == None:
+            return
+        prev.next = current.next
+        current = None
+```
+
+- Traversal
+- Sort
+- Search
+
+#### Time Complexity
+![Linked List Time Complexity](./images/linked_list_time_complexity.png)
+#### Application
+- You don't know how many items will be in the list (that is one of the advantages - ease of adding items).
+- You don't need random access to any elements (unlike an array, you cannot access an element at a particular index in a linked list).
+- You want to be able to insert items in the middle of the list.
+- You need constant time insertion/deletion from the list (unlike an array, you don't have to shift every other item in the list first).
+
 ### Tree Algorithms
 
 A tree data structure is a collection of nodes connected by edges. Each node contains a value or data which may or may
