@@ -1,69 +1,29 @@
-class Node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
-
-
-class LinkedList:
+class Queue:
     def __init__(self):
-        self.head = None
+        self.queue = []
 
-    def append(self, value):
-        new_node = Node(value)
-        if self.head is None:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next:
-                current = current.next
-            current.next = new_node
+    def add(self, data):
+        self.queue.insert(0, data)
 
-    def insert(self, value, position):
-        pass
+    def remove(self):
+        lst = []
+        for _ in self.queue:
+            lst.append(self.queue.pop())
+        print(lst)
 
-    def delete(self, value):
-        current = self.head
+    def peek(self):
+        return self.queue[-1]
 
-        if current.data == value:
-            self.head = current.next
-        else:
-            while current:
-                if current.data == value:
-                    break
-                prev = current
-                current = current.next
-
-            if current == None:
-                return
-            prev.next = current.next
-            current = None
-
-    def traverse(self):
-        pass
-
-    def sort(self):
-        pass
-
-    def search(self, value):
-        pass
-
-    def print_list(self):
-        vals = []
-        current = self.head
-        while current:
-            vals.append(current.data)
-            current = current.next
-        print(vals)
+    def print_stack(self):
+        print(self.queue)
 
 
-linked_list = LinkedList()
+aStack = Queue()
+vals = [4, 3, 12, 32, 1, 2]
+for val in vals:
+    aStack.add(val)
 
-list_val = [90, 23, 7, 23, 91, 34, 23, 'Bangladesh', 'India', 'Japan', 12]
-for val in list_val:
-    linked_list.append(val)
-
-linked_list.print_list()
-linked_list.delete(7)
-linked_list.delete(90)
-linked_list.delete(12)
-linked_list.print_list()
+# print(aStack.peek())
+aStack.print_stack()
+print(aStack.remove())
+# aStack.print_stack()

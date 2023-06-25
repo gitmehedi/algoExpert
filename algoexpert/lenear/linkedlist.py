@@ -47,6 +47,30 @@ class LinkedList:
     def search(self, value):
         pass
 
+    """
+    AlgoExpert
+    ==========
+    Remove Duplicates from LinkedList
+    """
+
+    def removeDuplicate(self):
+        current = self.head
+        prev = None
+        lst = []
+
+        while current is not None:
+            if current.data not in lst:
+                lst.append(current.data)
+                prev = current
+            else:
+                current = current.next
+                prev.next = current
+
+    """
+    AlgoExpert
+    ==========
+    """
+
     def print_list(self):
         vals = []
         current = self.head
@@ -59,11 +83,13 @@ class LinkedList:
 linked_list = LinkedList()
 
 list_val = [90, 23, 7, 23, 91, 34, 23, 'Bangladesh', 'India', 'Japan', 12]
+# list_val = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
 for val in list_val:
     linked_list.append(val)
 
 linked_list.print_list()
-linked_list.delete(7)
-linked_list.delete(90)
-linked_list.delete(12)
+# linked_list.delete(7)
+# linked_list.delete(90)
+# linked_list.delete(12)
+linked_list.removeDuplicate()
 linked_list.print_list()
