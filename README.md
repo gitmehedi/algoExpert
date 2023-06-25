@@ -1,27 +1,37 @@
 Data Structure and Algorithms
 ----------------------------------
 
-- [Data Structure and Algorithms](#data-structure-and-algorithms)
 - [Algorithms](#algorithms)
-  - [Linked Lists](#linked-lists)
-    - [Advantage](#advantage)
-    - [Disadvantage](#disadvantage)
-    - [Operations](#operations)
-    - [References](#references)
-    - [Time Complexity](#time-complexity)
-    - [Application](#application)
-  - [Tree Algorithms](#tree-algorithms)
-    - [Types of Tree Data Structure](#types-of-tree-data-structure)
-      - [Binary Tree](#binary-tree)
-      - [Binary Search Tree (BST)](#binary-search-tree-bst)
-      - [AVL Tree](#avl-tree)
-      - [B-Tree](#b-tree)
-    - [References](#references-1)
+  - [Categories of Algorithms](#categories-of-algorithms)
+  - [Types of Algorithms](#types-of-algorithms)
+    - [Linked Lists](#linked-lists)
+      - [Advantage](#advantage)
+      - [Disadvantage](#disadvantage)
+      - [Operations](#operations)
+      - [References](#references)
+      - [Time Complexity](#time-complexity)
+      - [Application](#application)
+    - [Tree Algorithms](#tree-algorithms)
+      - [Types of Tree Data Structure](#types-of-tree-data-structure)
+        - [Binary Tree](#binary-tree)
+        - [Binary Search Tree (BST)](#binary-search-tree-bst)
+        - [AVL Tree](#avl-tree)
+        - [B-Tree](#b-tree)
+      - [References](#references-1)
 
-## Algorithms
+# Algorithms
 
 A data structure is a way of organizing, storing, and managing data to be used efficiently. Data structures are an
 important part of several computer algorithms and programs.
+
+## Categories of Algorithms
+- **Search** - Algorithms to search an item in a data structure
+- **Sort** - Algorithms to sort items in a certain order
+- **Insert** - Algorithms to insert an item in a data structure
+- **Update** - Algorithms to update an existing item in a data structure
+- **Delete** - Algorithms to delete an item from the data structure
+
+## Types of Algorithms
 
 Types of Algorithms are listed below.
 
