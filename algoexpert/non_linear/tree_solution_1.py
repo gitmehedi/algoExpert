@@ -7,15 +7,16 @@ class Node:
     def insert(self, data):
         if self.data:
             if data < self.data:
-                if self.left is None:
+                if self.left:
+                    self.left.insert = data
+                else:
                     self.left = Node(data)
-                else:
-                    self.left.insert(data)
+
             elif data > self.data:
-                if self.right is None:
-                    self.right = Node(data)
+                if self.right:
+                    self.right.insert = data
                 else:
-                    self.right.insert(data)
+                    self.right = data
         else:
             self.data = data
 
