@@ -5,6 +5,7 @@ class Node:
         self.right = None
 
 
+
 class TreeBuilder:
     def __init__(self):
         self.root = None
