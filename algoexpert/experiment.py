@@ -5,7 +5,6 @@ class Node:
         self.right = None
 
 
-
 class TreeBuilder:
     def __init__(self):
         self.root = None
@@ -28,16 +27,19 @@ class TreeBuilder:
             else:
                 curNode.right = Node(data)
 
-    def print_tree(self):
+    def print_tree(self, node=None):
         vals = []
 
-        if self.root.left:
-            vals = self.root.left.print_tree()
+        if node is None:
+            node = self.root
 
-        vals.append(self.root.data)
+        if node.left:
+            vals = self.print_tree(node.left)
 
-        if self.root.right:
-            vals += self.root.right.print_tree()
+        vals.append(node.data)
+
+        if node.right:
+            vals += self.print_tree(node.right)
 
         return vals
 
