@@ -4,21 +4,11 @@ class Node:
         self.next = None
 
 
-class BuildLinked:
+class LinkedList:
     def __init__(self):
         self.root = None
 
-    def append(self, data):
-        new_node = Node(data)
-        if self.root is None:
-            self.root = new_node
-        else:
-            current = self.root
-            while current.next:
-                current = current.next
-            current.next = new_node
-
-    def addSorting(self, data):
+    def insert(self, data):
         new_node = Node(data)
         if self.root:
             if self.root.data > data:
@@ -35,17 +25,7 @@ class BuildLinked:
         else:
             self.root = new_node
 
-    def delete(self, data):
-        if self.root is None:
-            return False
-
-        current = self.root
-        while current.next:
-            if current.data == data:
-                current.next = current.next.next
-            current = current.next
-
-    def print_build(self):
+    def print_list(self):
         vals = []
         current = self.root
         while current:
@@ -55,22 +35,38 @@ class BuildLinked:
         print(vals)
 
 
-linked_list = [30, 4, 10, 2, 40, 26, 17, 11, 2, 3, 5, 6, 1]
-# linked_list = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-# linked_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+class Solution:
+    def mergeTwoList(self, list1, list2):
+        head = Node(0)
+        current = head
 
-build = BuildLinked()
-for val in linked_list:
-    build.addSorting(val)
+        cur1 = list1.root
+        cur2 = list2.root
+        while cur1.next and cur2.next:
+            if cur1.data > cur2.data:
+                current.next = cur1.next
+                cur1 = cur1.next
+            else:
+                current.next = cur2.data
+                cur2 = cur2.next
+            current = current.next
 
-build.print_build()
-build.delete(1)
-build.print_build()
-build.delete(3)
-build.print_build()
-build.delete(10)
-build.print_build()
-build.delete(26)
-build.print_build()
-build.delete(40)
-build.print_build()
+        current.next = cur1 or cur2
+        return head.next
+
+
+build = LinkedList()
+build2 = LinkedList()
+list1 = [1, 2, 4]
+list2 = [1, 3, 4]
+for val in list1:
+    build.insert(val)
+
+for val2 in list2:
+    build2.insert(val2)
+
+build.print_list()
+build2.print_list()
+
+solution = Solution()
+solution.mergeTwoList(build, build2)

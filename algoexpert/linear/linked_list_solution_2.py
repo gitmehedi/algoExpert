@@ -58,7 +58,7 @@ class BuildLinked:
 linked_list = [30, 4, 10, 2, 40, 26, 17, 11, 2, 3, 5, 6, 1]
 # linked_list = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 # linked_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+linked_list = [1, 2, 4]
 build = BuildLinked()
 for val in linked_list:
     build.addSorting(val)
