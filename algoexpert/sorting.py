@@ -1,8 +1,8 @@
-array = [8, 5, 2, 9, 5, 6, 3]
-
 """
 Bubble Sorting
 """
+
+array = [8, 5, 2, 9, 5, 6, 3]
 
 
 def bubbleSort(array):
@@ -94,12 +94,8 @@ def mergeSort(array):
             ans.append(right[j])
             j += 1
 
-    if i == len(left):
-        i = j
-        left = right
-    while i < len(left):
-        ans.append(left[i])
-        i += 1
+    remain = left[i:] + right[j:]
+    ans.extend(remain)
 
     return ans
 
