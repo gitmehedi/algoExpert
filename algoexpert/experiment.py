@@ -1,47 +1,99 @@
 """
-Linear Search
+Bubble Sort
 """
-
-list = [2, 3, 5, 12, 5, 6, 7, 8, 9]
-target = 13
+list = [8, 5, 2, 9, 5, 6, 3]
 
 
-def linearSearch(list, target):
-    for val in list:
-        if val == target:
-            return True
-    return False
+def bubbleSort(list):
+    arr = len(list)
+    for i in range(arr):
+        for j in range(arr - i - 1):
+            if list[j] > list[j + 1]:
+                list[j], list[j + 1] = list[j + 1], list[j]
+    return list
 
 
-print(linearSearch(list, target))
+print(bubbleSort(list))
 
 """
-Merge Sorting
+Insertion Sort
 """
-array = [8, 5, 2, 9, 5, 6, 3]
+list = [8, 5, 2, 9, 5, 6, 3]
 
 
-def mergeSort(array):
-    if len(array) <= 1:
-        return array
+def insertionSort(list):
+    arr = len(list)
+    for i in range(1, arr):
+        while list[i - 1] > list[i] and i > 0:
+            list[i - 1], list[i] = list[i], list[i - 1]
+            i -= 1
+    return list
 
-    mid = len(array) // 2
-    left = mergeSort(array[:mid])
-    right = mergeSort(array[mid:])
 
-    ans = []
+print(insertionSort(list))
+
+"""
+Selection Sort
+"""
+list = [8, 5, 2, 9, 5, 6, 3]
+
+
+def selectionSort(list):
+    arr = len(list)
+    for i in range(arr):
+        for j in range(i + 1, arr):
+            if list[i] > list[j]:
+                list[i], list[j] = list[j], list[i]
+    return list
+
+
+print(selectionSort(list))
+
+"""
+mergeSort Sort
+"""
+list = [8, 5, 2, 9, 5, 6, 3]
+
+
+def mergeSort(list):
+    if len(list) <= 1:
+        return list
+
+    mid = len(list) // 2
+    left = mergeSort(list[:mid])
+    right = mergeSort(list[mid:])
+
+    res = []
     i, j = 0, 0
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
-            ans.append(left[i])
+            res.append(left[i])
             i += 1
         else:
-            ans.append(right[j])
+            res.append(right[j])
             j += 1
+
     remain = left[i:] + right[j:]
-    ans.extend(remain)
+    res.extend(remain)
+    return res
 
-    return ans
+
+print(mergeSort(list))
+
+"""
+quickSort Sort
+"""
+list = [8, 5, 2, 9, 5, 6, 3]
 
 
-print(mergeSort(array))
+def quickSort(list):
+    if len(list) < 2:
+        return list
+
+    pivot = list[0]
+    less = [i for i in list[1:] if i < pivot]
+    greater = [i for i in list[1:] if i >= pivot]
+    return quickSort(less) + [pivot] + quickSort(greater)
+
+
+print(quickSort(list))
