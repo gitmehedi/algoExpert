@@ -1,99 +1,44 @@
 """
-Bubble Sort
+Direct Recursion Sort
 """
-list = [8, 5, 2, 9, 5, 6, 3]
+array = [5, 2, [7, -1], 3, [6, [-13, 8], 4]]
 
 
-def bubbleSort(list):
-    arr = len(list)
-    for i in range(arr):
-        for j in range(arr - i - 1):
-            if list[j] > list[j + 1]:
-                list[j], list[j + 1] = list[j + 1], list[j]
-    return list
-
-
-print(bubbleSort(list))
-
-"""
-Insertion Sort
-"""
-list = [8, 5, 2, 9, 5, 6, 3]
-
-
-def insertionSort(list):
-    arr = len(list)
-    for i in range(1, arr):
-        while list[i - 1] > list[i] and i > 0:
-            list[i - 1], list[i] = list[i], list[i - 1]
-            i -= 1
-    return list
-
-
-print(insertionSort(list))
-
-"""
-Selection Sort
-"""
-list = [8, 5, 2, 9, 5, 6, 3]
-
-
-def selectionSort(list):
-    arr = len(list)
-    for i in range(arr):
-        for j in range(i + 1, arr):
-            if list[i] > list[j]:
-                list[i], list[j] = list[j], list[i]
-    return list
-
-
-print(selectionSort(list))
-
-"""
-mergeSort Sort
-"""
-list = [8, 5, 2, 9, 5, 6, 3]
-
-
-def mergeSort(list):
-    if len(list) <= 1:
-        return list
-
-    mid = len(list) // 2
-    left = mergeSort(list[:mid])
-    right = mergeSort(list[mid:])
-
-    res = []
-    i, j = 0, 0
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            res.append(left[i])
-            i += 1
+def productSum(array, depth=1):
+    sum = 0
+    for i in array:
+        if type(i) is list:
+            depth += 1
+            sum += depth * productSum(i, depth)
+            depth -= 1
         else:
-            res.append(right[j])
-            j += 1
-
-    remain = left[i:] + right[j:]
-    res.extend(remain)
-    return res
+            sum += i
+    return sum
 
 
-print(mergeSort(list))
+print(productSum(array, depth=1))
 
-"""
-quickSort Sort
-"""
-list = [8, 5, 2, 9, 5, 6, 3]
+s = "aa"
+p = "a"
 
 
-def quickSort(list):
-    if len(list) < 2:
-        return list
-
-    pivot = list[0]
-    less = [i for i in list[1:] if i < pivot]
-    greater = [i for i in list[1:] if i >= pivot]
-    return quickSort(less) + [pivot] + quickSort(greater)
+def isMatch(s, p):
+    pass
 
 
-print(quickSort(list))
+print(isMatch(s, p))
+
+n = 16
+
+
+def isPowerOfThree(n):
+    if n < 0:
+        return False
+
+    i = 1
+    while i < n:
+        i *= 4
+    return i == n
+
+
+print(isPowerOfThree(n))
