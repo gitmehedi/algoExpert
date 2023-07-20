@@ -730,8 +730,6 @@ have multiple child nodes. This reduces the height and enables faster disk acces
 
 - https://www.shiksha.com/online-courses/articles/tree-data-structures-types-properties-and-applications/
 
-mkdir array string searching sorting greedy_algorithm dynamic_programming binary_search_tree graph heap recursion stack
-trie linked_list tree
 
 
 
