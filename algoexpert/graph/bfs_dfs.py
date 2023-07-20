@@ -1,5 +1,6 @@
 """
 Depth First Search (DFS) Algorith
+Breadth First Search (BFS) Algorith
 """
 
 
