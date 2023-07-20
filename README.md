@@ -2,49 +2,49 @@ Data Structure and Algorithms
 ----------------------------------
 
 - [Algorithms](#algorithms)
-  - [Categories of Algorithms](#categories-of-algorithms)
-  - [Types of Algorithms](#types-of-algorithms)
-  - [Details of Algorithms](#details-of-algorithms)
-    - [Arrays](#arrays)
-    - [String](#string)
-    - [Searching](#searching)
-    - [Sorting](#sorting)
-    - [Greedy Algorithm](#greedy-algorithm)
-    - [Dynamic Programming](#dynamic-programming)
-    - [Binary Search Trees](#binary-search-trees)
-    - [Graph](#graph)
-      - [History](#history)
-      - [Definition](#definition)
-      - [Types of Graphs](#types-of-graphs)
-        - [Directed Graph](#directed-graph)
-        - [Undirected Graph](#undirected-graph)
-      - [Properties of Graph](#properties-of-graph)
-      - [Graph Theory Algorithm](#graph-theory-algorithm)
-      - [Trees, Degree and Cycle of Graph](#trees-degree-and-cycle-of-graph)
-      - [References](#references)
-    - [Heaps](#heaps)
-    - [Recursion](#recursion)
-        - [Properties of Recursion](#properties-of-recursion)
-      - [Advantages](#advantages)
-      - [Disadvantages](#disadvantages)
-      - [Operations](#operations)
-      - [References](#references-1)
-    - [Stacks](#stacks)
-    - [Tries](#tries)
-    - [Linked Lists](#linked-lists)
-      - [Advantage](#advantage)
-      - [Disadvantage](#disadvantage)
-      - [Operations](#operations-1)
-      - [References](#references-2)
-      - [Time Complexity](#time-complexity)
-      - [Application](#application)
-    - [Tree Algorithms](#tree-algorithms)
-      - [Types of Tree Data Structure](#types-of-tree-data-structure)
-        - [Binary Tree](#binary-tree)
-        - [Binary Search Tree (BST)](#binary-search-tree-bst)
-        - [AVL Tree](#avl-tree)
-        - [B-Tree](#b-tree)
-      - [References](#references-3)
+    - [Categories of Algorithms](#categories-of-algorithms)
+    - [Types of Algorithms](#types-of-algorithms)
+    - [Details of Algorithms](#details-of-algorithms)
+        - [Arrays](#arrays)
+        - [String](#string)
+        - [Searching](#searching)
+        - [Sorting](#sorting)
+        - [Greedy Algorithm](#greedy-algorithm)
+        - [Dynamic Programming](#dynamic-programming)
+        - [Binary Search Trees](#binary-search-trees)
+        - [Graph](#graph)
+            - [History](#history)
+            - [Definition](#definition)
+            - [Types of Graphs](#types-of-graphs)
+                - [Directed Graph](#directed-graph)
+                - [Undirected Graph](#undirected-graph)
+            - [Properties of Graph](#properties-of-graph)
+            - [Graph Theory Algorithm](#graph-theory-algorithm)
+            - [Trees, Degree and Cycle of Graph](#trees-degree-and-cycle-of-graph)
+            - [References](#references)
+        - [Heaps](#heaps)
+        - [Recursion](#recursion)
+            - [Properties of Recursion](#properties-of-recursion)
+            - [Advantages](#advantages)
+            - [Disadvantages](#disadvantages)
+            - [Operations](#operations)
+            - [References](#references-1)
+        - [Stacks](#stacks)
+        - [Tries](#tries)
+        - [Linked Lists](#linked-lists)
+            - [Advantage](#advantage)
+            - [Disadvantage](#disadvantage)
+            - [Operations](#operations-1)
+            - [References](#references-2)
+            - [Time Complexity](#time-complexity)
+            - [Application](#application)
+        - [Tree Algorithms](#tree-algorithms)
+            - [Types of Tree Data Structure](#types-of-tree-data-structure)
+                - [Binary Tree](#binary-tree)
+                - [Binary Search Tree (BST)](#binary-search-tree-bst)
+                - [AVL Tree](#avl-tree)
+                - [B-Tree](#b-tree)
+            - [References](#references-3)
 
 # Algorithms
 
@@ -61,50 +61,20 @@ important part of several computer algorithms and programs.
 
 ## Types of Algorithms
 
-- [Algorithms](#algorithms)
-  - [Categories of Algorithms](#categories-of-algorithms)
-  - [Types of Algorithms](#types-of-algorithms)
-  - [Details of Algorithms](#details-of-algorithms)
-    - [Arrays](#arrays)
-    - [String](#string)
-    - [Searching](#searching)
-    - [Sorting](#sorting)
-    - [Greedy Algorithm](#greedy-algorithm)
-    - [Dynamic Programming](#dynamic-programming)
-    - [Binary Search Trees](#binary-search-trees)
-    - [Graph](#graph)
-      - [History](#history)
-      - [Definition](#definition)
-      - [Types of Graphs](#types-of-graphs)
-        - [Directed Graph](#directed-graph)
-        - [Undirected Graph](#undirected-graph)
-      - [Properties of Graph](#properties-of-graph)
-      - [Graph Theory Algorithm](#graph-theory-algorithm)
-      - [Trees, Degree and Cycle of Graph](#trees-degree-and-cycle-of-graph)
-      - [References](#references)
-    - [Heaps](#heaps)
-    - [Recursion](#recursion)
-        - [Properties of Recursion](#properties-of-recursion)
-      - [Advantages](#advantages)
-      - [Disadvantages](#disadvantages)
-      - [Operations](#operations)
-      - [References](#references-1)
-    - [Stacks](#stacks)
-    - [Tries](#tries)
-    - [Linked Lists](#linked-lists)
-      - [Advantage](#advantage)
-      - [Disadvantage](#disadvantage)
-      - [Operations](#operations-1)
-      - [References](#references-2)
-      - [Time Complexity](#time-complexity)
-      - [Application](#application)
-    - [Tree Algorithms](#tree-algorithms)
-      - [Types of Tree Data Structure](#types-of-tree-data-structure)
-        - [Binary Tree](#binary-tree)
-        - [Binary Search Tree (BST)](#binary-search-tree-bst)
-        - [AVL Tree](#avl-tree)
-        - [B-Tree](#b-tree)
-      - [References](#references-3)
+- [Arrays](#arrays)
+- [String](#string)
+- [Searching](#searching)
+- [Sorting](#sorting)
+- [Greedy Algorithm](#greedy-algorithm)
+- [Dynamic Programming](#dynamic-programming)
+- [Binary Search Trees](#binary-search-trees)
+- [Graph](#graph)
+- [Heaps](#heaps)
+- [Recursion](#recursion)
+- [Stacks](#stacks)
+- [Tries](#tries)
+- [Linked Lists](#linked-lists)
+- [Tree Algorithms](#tree-algorithms)
 
 ## Details of Algorithms
 
@@ -128,62 +98,70 @@ Types of Algorithms are listed below.
 
 #### History
 
-In Mathematics, a graph is a pictorial representation of any data in an organised manner. The graph shows the relationship between variable quantities. In a graph theory, the graph represents the set of objects, that are related in some sense to each other. The objects are basically mathematical concepts, expressed by vertices or nodes and the relation between the pair of nodes, are expressed by edges.
-
+In Mathematics, a graph is a pictorial representation of any data in an organised manner. The graph shows the
+relationship between variable quantities. In a graph theory, the graph represents the set of objects, that are related
+in some sense to each other. The objects are basically mathematical concepts, expressed by vertices or nodes and the
+relation between the pair of nodes, are expressed by edges.
 
 #### Definition
+
 A graph is a data structure that consists of a set of vertices (also known as nodes) connected by edges.
 Graph has two main components
+
 - A node or vertex
 - An edge E or an ordered pair is connection between to nodes U,V that is identified by unique pair(u,v).
 
 **Example**
 Suppose, a Graph G=(V,E), where
-Vertices, V={a,b,c,d} 
-Edges, E={{a,b},{a,c},{b,c},{c,d}}
-
+Vertices, V={a,b,c,d} Edges, E={{a,b},{a,c},{b,c},{c,d}}
 
 Application
+
 1. Social Network
 2. Google Maps
 3. Recommendation on e-commerce Application
 
 **Characteristics of Graphs**
+
 - Adjacent Node
 - Degree of a Node
 - Path
 - Isolated Node
-
 
 #### Types of Graphs
 
 The graphs are basically two types depending on the direction of EDGES
 
 ##### Directed Graph
-A graph in which the direction of the edge is defined by a particular node is a directed graph. 
+
+A graph in which the direction of the edge is defined by a particular node is a directed graph.
 
 Directed Acyclic Graph (DAG): It isa directed graph with no cycle.
 Tree: A tree is a restricted form of a graph.
 
 ##### Undirected Graph
+
 A graph in which the direction of the edge is not defined then it will be undirected graph
 
-**Connected Graph:** A graph is connected when there is a path between every pair of the vertices. In a connected graph there is no unreachable  node.
+**Connected Graph:** A graph is connected when there is a path between every pair of the vertices. In a connected graph
+there is no unreachable node.
 
-**Complete Graph:** A graph is which each node or vertex is connected to every node or vertex of the graph is called complete graph. A complete graph has n*(n-1)/2 no of edges.
+**Complete Graph:** A graph is which each node or vertex is connected to every node or vertex of the graph is called
+complete graph. A complete graph has n*(n-1)/2 no of edges.
 
-**Biconnected Graph:** A connected graph which cannot be broken down into any further pieces by deletion of any vertex.It is a graph with no articulation point.
-
+**Biconnected Graph:** A connected graph which cannot be broken down into any further pieces by deletion of any
+vertex.It is a graph with no articulation point.
 
 #### Properties of Graph
 
 * The starting point of the network is known as root.
-* When the same types of nodes are connected to one another, then the graph is known as an assortative graph, else it is called a disassortative graph.
+* When the same types of nodes are connected to one another, then the graph is known as an assortative graph, else it is
+  called a disassortative graph.
 * A cycle graph is said to be a graph that has a single cycle.
 * When all the pairs of nodes are connected by a single edge it forms a complete graph.
-* A graph is said to be in symmetry when each pair of vertices or nodes are connected in the same direction or in the reverse direction.
+* A graph is said to be in symmetry when each pair of vertices or nodes are connected in the same direction or in the
+  reverse direction.
 * When a graph has a single graph, it is a path graph.
-
 
 #### Graph Theory Algorithm
 
@@ -192,28 +170,33 @@ A graph in which the direction of the edge is not defined then it will be undire
 * Ford–Fulkerson algorithm
 * Edmonds–Karp algorithm and many more.
 
-#### Trees, Degree and Cycle of Graph  
-There are certain terms that are used in graph representation such as Degree, Trees, Cycle, etc. Let us learn them in brief.  
+#### Trees, Degree and Cycle of Graph
+
+There are certain terms that are used in graph representation such as Degree, Trees, Cycle, etc. Let us learn them in
+brief.  
 **Trees:**  
-A tree in a graph is the connection between undirected networks which are having only one path between any two vertices. It was introduced by British mathematician Arthur Cayley in 1857. The graph trees have only straight lines between the nodes in any specific direction but do not have any cycles or loops. Therefore trees are the directed graph.
+A tree in a graph is the connection between undirected networks which are having only one path between any two vertices.
+It was introduced by British mathematician Arthur Cayley in 1857. The graph trees have only straight lines between the
+nodes in any specific direction but do not have any cycles or loops. Therefore trees are the directed graph.
 
 **Degree:**  
-A degree in a graph is mentioned to be the number of edges connected to a vertex. It is denoted deg(v), where v is a vertex of the graph. So basically it the measure of the vertex.
+A degree in a graph is mentioned to be the number of edges connected to a vertex. It is denoted deg(v), where v is a
+vertex of the graph. So basically it the measure of the vertex.
 
 **Cycle:**  
-A cycle is a closed path in a graph that forms a loop. When the starting and ending point is the same in a graph that contains a set of vertices, then the cycle of the graph is formed. When there is no repetition of the vertex in a closed circuit, then the cycle is a simple cycle. The cycle graph is denoted by Cn.
+A cycle is a closed path in a graph that forms a loop. When the starting and ending point is the same in a graph that
+contains a set of vertices, then the cycle of the graph is formed. When there is no repetition of the vertex in a closed
+circuit, then the cycle is a simple cycle. The cycle graph is denoted by Cn.
+
 * A cycle that has an even number of edges or vertices is called Even Cycle.
 * A cycle that has an odd number of edges or vertices is called Odd Cycle.
 
-
-
-
 #### References
+
 - https://byjus.com/maths/graph-theory/
 - https://www.geeksforgeeks.org/mathematics-graph-theory-basics-set-1/?ref=lbp
 - https://www.youtube.com/watch?v=uOz5S0qZp4w
 - https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/
-
 
 ### Heaps
 
@@ -545,6 +528,7 @@ have multiple child nodes. This reduces the height and enables faster disk acces
 - To store blocks of data
 
 #### References
+
 - https://www.shiksha.com/online-courses/articles/tree-data-structures-types-properties-and-applications/
 
 
