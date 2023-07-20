@@ -1,21 +1,13 @@
 """
 Balance Brackets
 """
-string = "([])(){}(())()()"
+buildings = [3, 5, 4, 4, 3, 1, 3, 2]
+direction = "EAST"
 
 
-def balancedBrackets(string):
-    pairs = {'(': ')', '{': '}', '[': ']'}
-    stack = []
-
-    for st in string:
-        if st not in list(pairs.keys())+list(pairs.values()):
-            continue
-        elif not stack or pairs.get(stack[-1]) != st:
-            stack.append(st)
-        else:
-            stack.pop()
-    return len(stack) == 0
+def sunsetViews(buildings, direction):
+    # Write your code here.
+    return []
 
 
-print(balancedBrackets(string))
+print(sunsetViews(buildings, direction))
