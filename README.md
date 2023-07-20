@@ -111,18 +111,19 @@ Graph has two main components
 - A node or vertex
 - An edge E or an ordered pair is connection between to nodes U,V that is identified by unique pair(u,v).
 
-**Example**
-Suppose, a Graph G=(V,E), where
-Vertices, V={a,b,c,d} Edges, E={{a,b},{a,c},{b,c},{c,d}}
+![Graph Structure](./images/graph.png)
 
-Application
+**Example**  
+Suppose, a Graph `G=(V,E)`, where  
+Vertices, `V={a,b,c,d}`   
+Edges, `E={{a,b},{a,c},{b,c},{c,d}}`
 
+**Application**  
 1. Social Network
 2. Google Maps
 3. Recommendation on e-commerce Application
 
 **Characteristics of Graphs**
-
 - Adjacent Node
 - Degree of a Node
 - Path
@@ -132,25 +133,40 @@ Application
 
 The graphs are basically two types depending on the direction of EDGES
 
+![Types of Graph Structure](./images/types_of_graph.png)
+
 ##### Directed Graph
 
 A graph in which the direction of the edge is defined by a particular node is a directed graph.
 
-Directed Acyclic Graph (DAG): It isa directed graph with no cycle.
-Tree: A tree is a restricted form of a graph.
+![Directed Graph](./images/directed_graph.png)
+
+**_Directed Acyclic Graph (DAG):_** It isa directed graph with no cycle.
+**_Tree:_** A tree is a restricted form of a graph.
+
+
 
 ##### Undirected Graph
 
+
 A graph in which the direction of the edge is not defined then it will be undirected graph
 
-**Connected Graph:** A graph is connected when there is a path between every pair of the vertices. In a connected graph
+![Un-directed Graph](./images/un-directed_graph.png)
+
+_**Connected Graph:**_ A graph is connected when there is a path between every pair of the vertices. In a connected graph
 there is no unreachable node.
 
-**Complete Graph:** A graph is which each node or vertex is connected to every node or vertex of the graph is called
+![Connected Graph](./images/connected_graph.png)
+
+_**Complete Graph:**_ A graph is which each node or vertex is connected to every node or vertex of the graph is called
 complete graph. A complete graph has n*(n-1)/2 no of edges.
 
-**Biconnected Graph:** A connected graph which cannot be broken down into any further pieces by deletion of any
+![Complete Graph](./images/complete-graph.png)
+
+_**Biconnected Graph:**_ A connected graph which cannot be broken down into any further pieces by deletion of any
 vertex.It is a graph with no articulation point.
+
+
 
 #### Properties of Graph
 
@@ -168,7 +184,7 @@ vertex.It is a graph with no articulation point.
 * Bellman-Ford algorithm
 * Borůvka’s algorithm
 * Ford–Fulkerson algorithm
-* Edmonds–Karp algorithm and many more.
+* Edmonds–Karp algorithm
 
 #### Trees, Degree and Cycle of Graph
 
