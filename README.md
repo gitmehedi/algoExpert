@@ -1,50 +1,59 @@
 Data Structure and Algorithms
 ----------------------------------
-
+- [Data Structure and Algorithms](#data-structure-and-algorithms)
 - [Definition](#definition)
 - [Categories of Algorithms](#categories-of-algorithms)
-- [Types of Algorithms](#types-of-algorithms)
+- [Basic Operations of Algorithms](#basic-operations-of-algorithms)
 - [Details of Algorithms](#details-of-algorithms)
-    - [Arrays](#arrays)
-    - [String](#string)
-    - [Searching](#searching)
-    - [Sorting](#sorting)
-    - [Greedy Algorithm](#greedy-algorithm)
-    - [Dynamic Programming](#dynamic-programming)
-    - [Binary Search Trees](#binary-search-trees)
-    - [Graph](#graph)
-        - [History](#history)
-        - [Definition](#definition)
-        - [Types of Graphs](#types-of-graphs)
-            - [Directed Graph](#directed-graph)
-            - [Undirected Graph](#undirected-graph)
-        - [Properties of Graph](#properties-of-graph)
-        - [Graph Theory Algorithm](#graph-theory-algorithm)
-        - [Trees, Degree and Cycle of Graph](#trees-degree-and-cycle-of-graph)
-        - [References](#references)
-    - [Heaps](#heaps)
-    - [Recursion](#recursion)
-        - [Properties of Recursion](#properties-of-recursion)
-        - [Advantages](#advantages)
-        - [Disadvantages](#disadvantages)
-        - [Operations](#operations)
-        - [References](#references-1)
-    - [Stacks](#stacks)
-    - [Tries](#tries)
-    - [Linked Lists](#linked-lists)
-        - [Advantage](#advantage)
-        - [Disadvantage](#disadvantage)
-        - [Operations](#operations-1)
-        - [References](#references-2)
-        - [Time Complexity](#time-complexity)
-        - [Application](#application)
-    - [Tree Algorithms](#tree-algorithms)
-        - [Types of Tree Data Structure](#types-of-tree-data-structure)
-            - [Binary Tree](#binary-tree)
-            - [Binary Search Tree (BST)](#binary-search-tree-bst)
-            - [AVL Tree](#avl-tree)
-            - [B-Tree](#b-tree)
-        - [References](#references-3)
+  - [Arrays](#arrays)
+  - [String](#string)
+  - [Searching](#searching)
+  - [Sorting](#sorting)
+  - [Greedy Algorithm](#greedy-algorithm)
+  - [Dynamic Programming](#dynamic-programming)
+  - [Binary Search Trees](#binary-search-trees)
+  - [Graph](#graph)
+    - [History](#history)
+    - [Definition](#definition-1)
+    - [Types of Graphs](#types-of-graphs)
+      - [Directed Graph](#directed-graph)
+      - [Undirected Graph](#undirected-graph)
+    - [Properties of Graph](#properties-of-graph)
+    - [Graph Theory Algorithm](#graph-theory-algorithm)
+    - [Trees, Degree and Cycle of Graph](#trees-degree-and-cycle-of-graph)
+    - [References](#references)
+  - [Heaps](#heaps)
+  - [Recursion](#recursion)
+      - [Properties of Recursion](#properties-of-recursion)
+    - [Advantages](#advantages)
+    - [Disadvantages](#disadvantages)
+    - [Operations](#operations)
+    - [References](#references-1)
+  - [Stack](#stack)
+    - [Definition](#definition-2)
+    - [Types of Stack](#types-of-stack)
+    - [Basic Operations](#basic-operations)
+    - [Implementation of Stack](#implementation-of-stack)
+    - [Array Implementations](#array-implementations)
+      - [Linked List Implementation](#linked-list-implementation)
+    - [Application of Stack](#application-of-stack)
+    - [References](#references-2)
+  - [Tries](#tries)
+  - [Linked Lists](#linked-lists)
+    - [Advantage](#advantage)
+    - [Disadvantage](#disadvantage)
+    - [Operations](#operations-1)
+    - [References](#references-3)
+    - [Time Complexity](#time-complexity)
+    - [Application](#application)
+  - [Tree Algorithms](#tree-algorithms)
+    - [Types of Tree Data Structure](#types-of-tree-data-structure)
+      - [Binary Tree](#binary-tree)
+      - [Binary Search Tree (BST)](#binary-search-tree-bst)
+      - [AVL Tree](#avl-tree)
+      - [B-Tree](#b-tree)
+    - [References](#references-4)
+
 
 ## Definition
 
@@ -118,12 +127,14 @@ Suppose, a Graph `G=(V,E)`, where
 Vertices, `V={a,b,c,d}`   
 Edges, `E={{a,b},{a,c},{b,c},{c,d}}`
 
-**Application**  
+**Application**
+
 1. Social Network
 2. Google Maps
 3. Recommendation on e-commerce Application
 
 **Characteristics of Graphs**
+
 - Adjacent Node
 - Degree of a Node
 - Path
@@ -144,16 +155,14 @@ A graph in which the direction of the edge is defined by a particular node is a 
 **_Directed Acyclic Graph (DAG):_** It isa directed graph with no cycle.
 **_Tree:_** A tree is a restricted form of a graph.
 
-
-
 ##### Undirected Graph
-
 
 A graph in which the direction of the edge is not defined then it will be undirected graph
 
 ![Un-directed Graph](./images/un-directed-graph.png)
 
-_**Connected Graph:**_ A graph is connected when there is a path between every pair of the vertices. In a connected graph
+_**Connected Graph:**_ A graph is connected when there is a path between every pair of the vertices. In a connected
+graph
 there is no unreachable node.
 
 ![Connected Graph](./images/connected-graph.png)
@@ -165,8 +174,6 @@ complete graph. A complete graph has n*(n-1)/2 no of edges.
 
 _**Biconnected Graph:**_ A connected graph which cannot be broken down into any further pieces by deletion of any
 vertex.It is a graph with no articulation point.
-
-
 
 #### Properties of Graph
 
@@ -269,7 +276,183 @@ breaking down the problem into smaller, more manageable sub-problems until no fu
 - https://www.simplilearn.com/tutorials/data-structure-tutorial/recursive-algorithm
 - https://benpfaff.org/writings/clc/recursion-vs-iteration.html
 
-### Stacks
+### Stack
+
+#### Definition
+
+A stack is a linear data structure in which the insertion of a new element and removal of an existing element takes
+place at the same end represented as the top of the stack.
+
+![Stack](./images/stack_basic.png)
+
+#### Types of Stack
+
+**Fixed Size Stack**  
+As the name suggests, a fixed size stack has a fixed size and cannot grow or shrink dynamically. If the stack is full
+and an attempt is made to add an element to it, an overflow error occurs. If the stack is empty and an attempt is made
+to remove an element from it, an underflow error occurs.
+
+**Dynamic Size Stack**  
+A dynamic size stack can grow or shrink dynamically. When the stack is full, it automatically increases its size to
+accommodate the new element, and when the stack is empty, it decreases its size. This type of stack is implemented using
+a linked list, as it allows for easy resizing of the stack.
+
+#### Basic Operations
+
+- push() to insert an element into the stack
+- pop() to remove an element from stack
+- top() Returns the top element of the stack
+- isEmpty() return true if stack is empty else false
+- size() return the size of stack
+
+![Stack Operations](./images/stack_operations.png)
+
+#### Implementation of Stack
+
+There are two ways to implement a stack-
+
+- Array
+- Linked List
+
+#### Array Implementations
+![Stack](./images/stack_array.png)
+
+
+```python
+from sys import maxsize
+
+
+def createStack():
+    stack = []
+    return stack
+
+
+def isEmpty(stack):
+    return len(stack) == 0
+
+
+def push(stack, item):
+    stack.append(item)
+    print(item + " pushed to stack ")
+
+
+def pop(stack):
+    if (isEmpty(stack)):
+        return str(-maxsize - 1)
+
+    return stack.pop()
+
+
+def peek(stack):
+    if (isEmpty(stack)):
+        return str(-maxsize - 1)  # return minus infinite
+    return stack[len(stack) - 1]
+
+
+stack = createStack()
+push(stack, str(10))
+push(stack, str(20))
+push(stack, str(30))
+print(pop(stack))
+```
+
+**Advantage of Array Implementation**
+
+* Easy to implement.
+* Memory is saved as pointers are not involved.
+
+**Disadvantage of Array Implementation**
+
+* It is not dynamic i.e., it doesn’t grow and shrink depending on needs at
+  runtime. [But in case of dynamic sized arrays like vector in C++, list in Python, ArrayList in Java, stacks can grow and shrink with array implementation as well].
+* The total size of the stack must be defined beforehand.
+
+##### Linked List Implementation
+![Stack](./images/stack_linked_list.png)
+
+```python
+
+
+class StackNode:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class Stack:
+    def __init__(self):
+        self.root = None
+
+    def push(self, elm):
+        new_node = StackNode(elm)
+        new_node.next = self.root
+        self.root = new_node
+
+    def pop(self):
+        if self.root is None:
+            return []
+        temp = self.root
+        self.root = self.root.next
+
+        return temp.data
+
+    def peek(self):
+
+        return self.root.data if self.root else None
+
+    def showStack(self):
+        res = []
+        current = self.root
+        while current:
+            res.append(current.data)
+            current = current.next
+        return res
+
+
+stack = Stack()
+stack.push(5)
+stack.push(15)
+stack.push(35)
+stack.push(55)
+stack.push(75)
+print(stack.showStack())
+print(stack.pop())
+print(stack.showStack())
+print(stack.pop())
+print(stack.showStack())
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+print(stack.peek())
+print(stack.peek())
+print(stack.showStack())
+```
+
+
+**Advantage of Linked List Implementation**
+
+* The linked list implementation of a stack can grow and shrink according to the needs at runtime.
+* It is used in many virtual machines like JVM.
+  **Disadvantage of Linked List Implementation**
+* Requires extra memory due to the involvement of pointers.
+* Random accessing is not possible in stack.
+
+#### Application of Stack
+
+Here are the top 7 applications of the stack in data structure:
+
+* Expression Evaluation and Conversion
+* Backtracking
+* Function Call
+* Parentheses Checking
+* String Reversal
+* Syntax Parsing
+* Memory Management
+
+#### References
+- https://www.simplilearn.com/tutorials/data-structure-tutorial/stacks-in-data-structures
+- https://www.programiz.com/dsa/stack
+- https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/
 
 ### Tries
 
@@ -547,11 +730,8 @@ have multiple child nodes. This reduces the height and enables faster disk acces
 
 - https://www.shiksha.com/online-courses/articles/tree-data-structures-types-properties-and-applications/
 
-
-
-
-
-mkdir array string searching sorting greedy_algorithm dynamic_programming binary_search_tree graph heap recursion stack trie linked_list tree
+mkdir array string searching sorting greedy_algorithm dynamic_programming binary_search_tree graph heap recursion stack
+trie linked_list tree
 
 
 
