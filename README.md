@@ -53,14 +53,6 @@ important part of several computer algorithms and programs.
 
 ## Categories of Algorithms
 
-- **Search** - Algorithms to search an item in a data structure
-- **Sort** - Algorithms to sort items in a certain order
-- **Insert** - Algorithms to insert an item in a data structure
-- **Update** - Algorithms to update an existing item in a data structure
-- **Delete** - Algorithms to delete an item from the data structure
-
-## Types of Algorithms
-
 - [Arrays](#arrays)
 - [String](#string)
 - [Searching](#searching)
@@ -75,6 +67,14 @@ important part of several computer algorithms and programs.
 - [Tries](#tries)
 - [Linked Lists](#linked-lists)
 - [Tree Algorithms](#tree-algorithms)
+
+## Basic Operations of Algorithms
+
+- **Search** - Algorithms to search an item in a data structure
+- **Sort** - Algorithms to sort items in a certain order
+- **Insert** - Algorithms to insert an item in a data structure
+- **Update** - Algorithms to update an existing item in a data structure
+- **Delete** - Algorithms to delete an item from the data structure
 
 ## Details of Algorithms
 
