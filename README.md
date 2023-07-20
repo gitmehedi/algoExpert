@@ -139,7 +139,7 @@ The graphs are basically two types depending on the direction of EDGES
 
 A graph in which the direction of the edge is defined by a particular node is a directed graph.
 
-![Directed Graph](./images/directed_graph.png)
+![Directed Graph](./images/directed-graph.png)
 
 **_Directed Acyclic Graph (DAG):_** It isa directed graph with no cycle.
 **_Tree:_** A tree is a restricted form of a graph.
@@ -151,12 +151,12 @@ A graph in which the direction of the edge is defined by a particular node is a 
 
 A graph in which the direction of the edge is not defined then it will be undirected graph
 
-![Un-directed Graph](./images/un-directed_graph.png)
+![Un-directed Graph](./images/un-directed-graph.png)
 
 _**Connected Graph:**_ A graph is connected when there is a path between every pair of the vertices. In a connected graph
 there is no unreachable node.
 
-![Connected Graph](./images/connected_graph.png)
+![Connected Graph](./images/connected-graph.png)
 
 _**Complete Graph:**_ A graph is which each node or vertex is connected to every node or vertex of the graph is called
 complete graph. A complete graph has n*(n-1)/2 no of edges.
