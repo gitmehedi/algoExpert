@@ -34,7 +34,7 @@ Data Structure and Algorithms
     - [Types of Stack](#types-of-stack)
     - [Basic Operations](#basic-operations)
     - [Implementation of Stack](#implementation-of-stack)
-    - [Array Implementations](#array-implementations)
+      - [Array Implementations](#array-implementations)
       - [Linked List Implementation](#linked-list-implementation)
     - [Application of Stack](#application-of-stack)
     - [References](#references-2)
@@ -314,7 +314,7 @@ There are two ways to implement a stack-
 - Array
 - Linked List
 
-#### Array Implementations
+##### Array Implementations
 ![Stack](./images/stack_array.png)
 
 
