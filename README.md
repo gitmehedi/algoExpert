@@ -1,59 +1,66 @@
-Data Structure and Algorithms
+<div align="center">
+    <img src="images/data_structure.png" height="320" width="830" alt="Data Structure">
+    <h1>Data Structure and Algorithms</h1>
+    <strong>A data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.</strong>
+</div>
+
+
+Contents
 ----------------------------------
+
 - [Data Structure and Algorithms](#data-structure-and-algorithms)
 - [Definition](#definition)
 - [Categories of Algorithms](#categories-of-algorithms)
 - [Basic Operations of Algorithms](#basic-operations-of-algorithms)
 - [Details of Algorithms](#details-of-algorithms)
-  - [Arrays](#arrays)
-  - [String](#string)
-  - [Searching](#searching)
-  - [Sorting](#sorting)
-  - [Greedy Algorithm](#greedy-algorithm)
-  - [Dynamic Programming](#dynamic-programming)
-  - [Binary Search Trees](#binary-search-trees)
-  - [Graph](#graph)
-    - [History](#history)
-    - [Definition](#definition-1)
-    - [Types of Graphs](#types-of-graphs)
-      - [Directed Graph](#directed-graph)
-      - [Undirected Graph](#undirected-graph)
-    - [Properties of Graph](#properties-of-graph)
-    - [Graph Theory Algorithm](#graph-theory-algorithm)
-    - [Trees, Degree and Cycle of Graph](#trees-degree-and-cycle-of-graph)
-    - [References](#references)
-  - [Heaps](#heaps)
-  - [Recursion](#recursion)
-      - [Properties of Recursion](#properties-of-recursion)
-    - [Advantages](#advantages)
-    - [Disadvantages](#disadvantages)
-    - [Operations](#operations)
-    - [References](#references-1)
-  - [Stack](#stack)
-    - [Definition](#definition-2)
-    - [Types of Stack](#types-of-stack)
-    - [Basic Operations](#basic-operations)
-    - [Implementation of Stack](#implementation-of-stack)
-      - [Array Implementations](#array-implementations)
-      - [Linked List Implementation](#linked-list-implementation)
-    - [Application of Stack](#application-of-stack)
-    - [References](#references-2)
-  - [Tries](#tries)
-  - [Linked Lists](#linked-lists)
-    - [Advantage](#advantage)
-    - [Disadvantage](#disadvantage)
-    - [Operations](#operations-1)
-    - [References](#references-3)
-    - [Time Complexity](#time-complexity)
-    - [Application](#application)
-  - [Tree Algorithms](#tree-algorithms)
-    - [Types of Tree Data Structure](#types-of-tree-data-structure)
-      - [Binary Tree](#binary-tree)
-      - [Binary Search Tree (BST)](#binary-search-tree-bst)
-      - [AVL Tree](#avl-tree)
-      - [B-Tree](#b-tree)
-    - [References](#references-4)
-
+    - [Arrays](#arrays)
+    - [String](#string)
+    - [Searching](#searching)
+    - [Sorting](#sorting)
+    - [Greedy Algorithm](#greedy-algorithm)
+    - [Dynamic Programming](#dynamic-programming)
+    - [Binary Search Trees](#binary-search-trees)
+    - [Graph](#graph)
+        - [History](#history)
+        - [Definition](#definition-1)
+        - [Types of Graphs](#types-of-graphs)
+            - [Directed Graph](#directed-graph)
+            - [Undirected Graph](#undirected-graph)
+        - [Properties of Graph](#properties-of-graph)
+        - [Graph Theory Algorithm](#graph-theory-algorithm)
+        - [Trees, Degree and Cycle of Graph](#trees-degree-and-cycle-of-graph)
+        - [References](#references)
+    - [Heaps](#heaps)
+    - [Recursion](#recursion)
+        - [Properties of Recursion](#properties-of-recursion)
+        - [Advantages](#advantages)
+        - [Disadvantages](#disadvantages)
+        - [Operations](#operations)
+        - [References](#references-1)
+    - [Stack](#stack)
+        - [Definition](#definition-2)
+        - [Types of Stack](#types-of-stack)
+        - [Basic Operations](#basic-operations)
+        - [Implementation of Stack](#implementation-of-stack)
+            - [Array Implementations](#array-implementations)
+            - [Linked List Implementation](#linked-list-implementation)
+        - [Application of Stack](#application-of-stack)
+        - [References](#references-2)
+    - [Tries](#tries)
+    - [Linked Lists](#linked-lists)
+        - [Advantage](#advantage)
+        - [Disadvantage](#disadvantage)
+        - [Operations](#operations-1)
+        - [References](#references-3)
+        - [Time Complexity](#time-complexity)
+        - [Application](#application)
+    - [Tree Algorithms](#tree-algorithms)
+        - [Types of Tree Data Structure](#types-of-tree-data-structure)
+            - [Binary Tree](#binary-tree)
+            - [Binary Search Tree (BST)](#binary-search-tree-bst)
+            - [AVL Tree](#avl-tree)
+            - [B-Tree](#b-tree)
+        - [References](#references-4)
 
 ## Definition
 
@@ -316,8 +323,8 @@ There are two ways to implement a stack-
 - Linked List
 
 ##### Array Implementations
-![Stack](./images/stack_array.png)
 
+![Stack](./images/stack_array.png)
 
 ```python
 from sys import maxsize
@@ -369,6 +376,7 @@ print(pop(stack))
 * The total size of the stack must be defined beforehand.
 
 ##### Linked List Implementation
+
 ![Stack](./images/stack_linked_list.png)
 
 ```python
@@ -429,7 +437,6 @@ print(stack.peek())
 print(stack.showStack())
 ```
 
-
 **Advantage of Linked List Implementation**
 
 * The linked list implementation of a stack can grow and shrink according to the needs at runtime.
@@ -451,13 +458,17 @@ Here are the top 7 applications of the stack in data structure:
 * Memory Management
 
 #### References
+
 - https://www.simplilearn.com/tutorials/data-structure-tutorial/stacks-in-data-structures
 - https://www.programiz.com/dsa/stack
 - https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/
 
 ### Queue
+
 #### Definition
-A queue is linear data structure that is open at both ends and the operations are performed in First In First Out (FIFO) order
+
+A queue is linear data structure that is open at both ends and the operations are performed in First In First Out (FIFO)
+order
 
 ![Basic Queue](./algoexpert/queue/img/queue_basic.png)
 
@@ -471,7 +482,8 @@ There are four different types of queues:
 - Double Ended Queue
 
 **Simple Queue**  
-In a simple queue, insertion takes place at the rear and removal occurs at the front. It strictly follows the FIFO (First in First out) rule.
+In a simple queue, insertion takes place at the rear and removal occurs at the front. It strictly follows the FIFO (
+First in First out) rule.
 
 ![Simple Queue](./algoexpert/queue/img/simple_queue.png)
 
@@ -481,35 +493,42 @@ In a circular queue, the last element points to the first element making a circu
 ![Cirucular Queue](./algoexpert/queue/img/circular_queue.png)
 
 **Priority Queue**  
-A priority queue is a special type of queue in which each element is associated with a priority and is served according to its priority. If elements with the same priority occur, they are served according to their order in the queue.
+A priority queue is a special type of queue in which each element is associated with a priority and is served according
+to its priority. If elements with the same priority occur, they are served according to their order in the queue.
 
 ![Priority Queue](./algoexpert/queue/img/priority_queue.png)
 
 **Deque (Double Ended Queue)**  
-In a double ended queue, insertion and removal of elements can be performed from either from the front or rear. Thus, it does not follow the FIFO (First In First Out) rule.
+In a double ended queue, insertion and removal of elements can be performed from either from the front or rear. Thus, it
+does not follow the FIFO (First In First Out) rule.
 
 ![Deque](./algoexpert/queue/img/deque.png)
 
 #### Basic Operations
 
 Some of the basic operations for Queue in Data Structure are:
-1. **Enqueue()** – Adds (or stores) an element to the end of the queue..
-2. **Dequeue()** – Removal of elements from the queue.
-3. **Peek()** or **front()**- Acquires the data element available at the front node of the queue without deleting it.
-4. **rear()** – This operation returns the element at the rear end without removing it.
-5. **isFull()** – Validates if the queue is full.
-6. **isNull()** – Checks if the queue is empty.
+
+1. **Enqueue()** – Adds (or stores) an element to the end of the queue..
+2. **Dequeue()** – Removal of elements from the queue.
+3. **Peek()** or **front()**- Acquires the data element available at the front node of the queue without deleting it.
+4. **rear()** – This operation returns the element at the rear end without removing it.
+5. **isFull()** – Validates if the queue is full.
+6. **isNull()** – Checks if the queue is empty.
 
 #### Implementation of Queue
+
 There are two ways to implement a stack-
+
 - Array
 - Linked List
 
 **1. Array Representation of Queue:**
-Like stacks, Queues can also be represented in an array: In this representation, the Queue is implemented using the array. Variables used in this case are
-* Queue: the name of the array storing queue elements.
+Like stacks, Queues can also be represented in an array: In this representation, the Queue is implemented using the
+array. Variables used in this case are
+
+* Queue:the name of the array storing queue elements.
 * Front: the index where the first element is stored in the array representing the queue.
-* Rear: the index where the last element is stored in an array representing the queue.
+* Rear:the index where the last element is stored in an array representing the queue.
 
 ```python
 # Queue implementation in Array
@@ -554,6 +573,7 @@ q.display()
 
 **2. Linked List Representation of Queue:**
 A queue can also be represented using following entities:
+
 * Linked-lists,
 * Pointers, and
 * Structures.
@@ -563,17 +583,18 @@ A queue can also be represented using following entities:
 ```
 
 #### Application of Stacks
+
 - CPU scheduling, Disk Scheduling
-- When data is transferred asynchronously between two processes.The queue is used for synchronization. For example: IO Buffers, pipes, file IO, etc
+- When data is transferred asynchronously between two processes.The queue is used for synchronization. For example: IO
+  Buffers, pipes, file IO, etc
 - Handling of interrupts in real-time systems.
 - Call Center phone systems use Queues to hold people calling them in order.
 
-
 #### References
+
 - https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/
 - https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm
 - https://www.programiz.com/dsa/queue
-
 
 ### Tries
 
