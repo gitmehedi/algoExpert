@@ -73,6 +73,7 @@ important part of several computer algorithms and programs.
 - [Heaps](#heaps)
 - [Recursion](#recursion)
 - [Stacks](#stacks)
+- [Queue](#queue)
 - [Tries](#tries)
 - [Linked Lists](#linked-lists)
 - [Tree Algorithms](#tree-algorithms)
@@ -453,6 +454,86 @@ Here are the top 7 applications of the stack in data structure:
 - https://www.simplilearn.com/tutorials/data-structure-tutorial/stacks-in-data-structures
 - https://www.programiz.com/dsa/stack
 - https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/
+
+### Queue
+Definition
+A queue is linear data structure that is open at both ends and the operations are performed in First In First Out (FIFO) order
+
+![Basic Queue](./algoexpert/queue/img/queue_basic.png)
+
+#### Types of Queue
+
+There are four different types of queues:
+
+- Simple Queue
+- Circular Queue
+- Priority Queue
+- Double Ended Queue
+
+**Simple Queue**  
+In a simple queue, insertion takes place at the rear and removal occurs at the front. It strictly follows the FIFO (First in First out) rule.
+
+![Simple Queue](./algoexpert/queue/img/simple_queue.png)
+
+**Circular Queue**  
+In a circular queue, the last element points to the first element making a circular link.
+
+![Cirucular Queue](./algoexpert/queue/img/circular_queue.png)
+
+**Priority Queue**  
+A priority queue is a special type of queue in which each element is associated with a priority and is served according to its priority. If elements with the same priority occur, they are served according to their order in the queue.
+
+![Priority Queue](./algoexpert/queue/img/priority_queue.png)
+
+**Deque (Double Ended Queue)**  
+In a double ended queue, insertion and removal of elements can be performed from either from the front or rear. Thus, it does not follow the FIFO (First In First Out) rule.
+
+![Deque](./algoexpert/queue/img/deque.png)
+
+#### Basic Operations
+
+Some of the basic operations for Queue in Data Structure are:
+1. **Enqueue()** – Adds (or stores) an element to the end of the queue..
+2. **Dequeue()** – Removal of elements from the queue.
+3. **Peek()** or front()- Acquires the data element available at the front node of the queue without deleting it.
+4. **rear()** – This operation returns the element at the rear end without removing it.
+5. **isFull()** – Validates if the queue is full.
+6. **isNull()** – Checks if the queue is empty.
+
+#### Implementation of Queue
+There are two ways to implement a stack-
+- Array
+- Linked List
+
+**1. Array Representation of Queue:**
+Like stacks, Queues can also be represented in an array: In this representation, the Queue is implemented using the array. Variables used in this case are
+* Queue: the name of the array storing queue elements.
+* Front: the index where the first element is stored in the array representing the queue.
+* Rear: the index where the last element is stored in an array representing the queue.
+
+
+
+**2. Linked List Representation of Queue:**
+A queue can also be represented using following entities:
+* Linked-lists,
+* Pointers, and
+* Structures.
+
+
+#### Application of Stacks
+Application of queue is common. In a computer system, there may be queues of tasks waiting for the printer, for access to disk storage, or even in a time-sharing system, for use of the CPU. Within a single program, there may be multiple requests to be kept in a queue, or one task may create other tasks, which must be done in turn by keeping them in a queue.
+
+- It has a single resource and multiple consumers.
+- It synchronizes between slow and fast devices.
+- In a network, a queue is used in devices such as a router/switch and mail queue.
+- Variations: dequeue, priority queue and double-ended priority queue.
+
+
+#### References
+- https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/
+- https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm
+- https://www.programiz.com/dsa/queue
+
 
 ### Tries
 
