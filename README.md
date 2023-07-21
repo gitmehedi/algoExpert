@@ -495,7 +495,7 @@ In a double ended queue, insertion and removal of elements can be performed from
 Some of the basic operations for Queue in Data Structure are:
 1. **Enqueue()** – Adds (or stores) an element to the end of the queue..
 2. **Dequeue()** – Removal of elements from the queue.
-3. **Peek()** or front()- Acquires the data element available at the front node of the queue without deleting it.
+3. **Peek()** or **front()**- Acquires the data element available at the front node of the queue without deleting it.
 4. **rear()** – This operation returns the element at the rear end without removing it.
 5. **isFull()** – Validates if the queue is full.
 6. **isNull()** – Checks if the queue is empty.
@@ -511,7 +511,46 @@ Like stacks, Queues can also be represented in an array: In this representation,
 * Front: the index where the first element is stored in the array representing the queue.
 * Rear: the index where the last element is stored in an array representing the queue.
 
+```python
+# Queue implementation in Array
 
+class Queue:
+
+    def __init__(self):
+        self.queue = []
+
+    # Add an element
+    def enqueue(self, item):
+        self.queue.append(item)
+
+    # Remove an element
+    def dequeue(self):
+        if len(self.queue) < 1:
+            return None
+        return self.queue.pop(0)
+
+    # Display  the queue
+    def display(self):
+        print(self.queue)
+
+    def size(self):
+        return len(self.queue)
+
+
+q = Queue()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+q.enqueue(4)
+q.enqueue(5)
+
+q.display()
+
+q.dequeue()
+
+print("After removing an element")
+q.display()
+```
 
 **2. Linked List Representation of Queue:**
 A queue can also be represented using following entities:
@@ -519,14 +558,15 @@ A queue can also be represented using following entities:
 * Pointers, and
 * Structures.
 
+```python
+
+```
 
 #### Application of Stacks
-Application of queue is common. In a computer system, there may be queues of tasks waiting for the printer, for access to disk storage, or even in a time-sharing system, for use of the CPU. Within a single program, there may be multiple requests to be kept in a queue, or one task may create other tasks, which must be done in turn by keeping them in a queue.
-
-- It has a single resource and multiple consumers.
-- It synchronizes between slow and fast devices.
-- In a network, a queue is used in devices such as a router/switch and mail queue.
-- Variations: dequeue, priority queue and double-ended priority queue.
+- CPU scheduling, Disk Scheduling
+- When data is transferred asynchronously between two processes.The queue is used for synchronization. For example: IO Buffers, pipes, file IO, etc
+- Handling of interrupts in real-time systems.
+- Call Center phone systems use Queues to hold people calling them in order.
 
 
 #### References
