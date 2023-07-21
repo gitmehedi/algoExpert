@@ -456,7 +456,7 @@ Here are the top 7 applications of the stack in data structure:
 - https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/
 
 ### Queue
-Definition
+#### Definition
 A queue is linear data structure that is open at both ends and the operations are performed in First In First Out (FIFO) order
 
 ![Basic Queue](./algoexpert/queue/img/queue_basic.png)
