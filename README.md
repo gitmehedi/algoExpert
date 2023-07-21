@@ -62,10 +62,39 @@ Contents
             - [B-Tree](#b-tree)
         - [References](#references-4)
 
-## Definition
+## Data Structure
+
+### Definition
 
 A data structure is a way of organizing, storing, and managing data to be used efficiently. Data structures are an
 important part of several computer algorithms and programs.
+
+### Classification of Data Structure:
+
+<div align="center">
+    <img src="images/ds_classification.png"  alt="Data Structure">
+</div>
+
+- **Linear Data Structure**: Data structure in which data elements are arranged sequentially or linearly, where each
+  element is attached to its previous and next adjacent elements, is called a linear data structure.
+  Examples of linear data structures are array, stack, queue, linked list, etc.
+    - **Static Data Structure**: Static data structure has a fixed memory size. It is easier to access the elements in a
+      static data structure.
+      An example of this data structure is an array.
+    - **Dynamic Data Structure**: In dynamic data structure, the size is not fixed. It can be randomly updated during
+      the runtime which may be considered efficient concerning the memory (space) complexity of the code.
+      Examples of this data structure are queue, stack, etc.
+- **Non-linear Data Structure**: Data structures where data elements are not placed sequentially or linearly are called
+  non-linear data structures. In a non-linear data structure, we can’t traverse all the elements in a single run only.
+
+Examples of non-linear data structures are trees and graphs.
+
+![Memory Presentation](./images/ds_memory_location.png)
+
+### References
+
+- https://www.geeksforgeeks.org/data-structures/
+- https://www.javatpoint.com/data-structure-introduction
 
 ## Categories of Algorithms
 
@@ -85,7 +114,7 @@ important part of several computer algorithms and programs.
 - [Linked Lists](#linked-lists)
 - [Tree Algorithms](#tree-algorithms)
 
-## Basic Operations of Algorithms
+### Basic Operations of Algorithms
 
 - **Search** - Algorithms to search an item in a data structure
 - **Sort** - Algorithms to sort items in a certain order
