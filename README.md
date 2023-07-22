@@ -781,6 +781,8 @@ def delete(self, value):
 A tree data structure is a collection of nodes connected by edges. Each node contains a value or data which may or may
 not have a child node.
 
+![Tree Data Structure](./algoexpert/tree/img/tree_basic.png)
+
 Tree Data Structure Terminology
 
  Terminology    | Description                                                                                                                                                 | Logic | Examples 
@@ -810,6 +812,8 @@ The following are the different types of trees data structures:
 ##### Binary Tree
 
 A binary tree is a tree data structure in which each node can have 0, 1, or 2 children – left and right child.
+
+
 
 **Properties**
 
@@ -900,6 +904,8 @@ have multiple child nodes. This reduces the height and enables faster disk acces
 #### References
 
 - https://www.shiksha.com/online-courses/articles/tree-data-structures-types-properties-and-applications/
+- https://www.geeksforgeeks.org/introduction-to-tree-data-structure-and-algorithm-tutorials/
+- https://www.programiz.com/dsa/trees
 
 
 
