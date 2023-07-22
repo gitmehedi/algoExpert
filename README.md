@@ -92,9 +92,9 @@ Examples of non-linear data structures are trees and graphs.
 ![Memory Presentation](./images/ds_memory_location.png)
 
 ### References
-
 - https://www.geeksforgeeks.org/data-structures/
 - https://www.javatpoint.com/data-structure-introduction
+- https://www.tutorialscan.com/datastructure/classification-of-data-structure/
 
 ## Categories of Algorithms
 
