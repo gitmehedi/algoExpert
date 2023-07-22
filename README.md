@@ -776,6 +776,12 @@ def delete(self, value):
 - You need constant time insertion/deletion from the list (unlike an array, you don't have to shift every other item in
   the list first).
 
+
+#### References
+- https://www.geeksforgeeks.org/data-structures/linked-list/
+
+
+
 ### Tree Algorithms
 
 A tree data structure is a collection of nodes connected by edges. Each node contains a value or data which may or may
