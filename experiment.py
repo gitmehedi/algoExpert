@@ -1,82 +1,143 @@
 """
-Linked List Operations
+Longest Substring Without Duplication
 """
-ll = [1, 2, 3]
+
+s = "euazbipzncptldueeuechubrcourfpftcebikrxhybkymimgvldiwqvkszfycvqyvtiwfckexmowcxztkfyzqovbtmzpxojfofbvwnncajvrvdbvjhcrameamcfmcoxryjukhpljwszknhiypvyskmsujkuggpztltpgoczafmfelahqwjbhxtjmebnymdyxoeodqmvkxittxjnlltmoobsgzdfhismogqfpfhvqnxeuosjqqalvwhsidgiavcatjjgeztrjuoixxxoznklcxolgpuktirmduxdywwlbikaqkqajzbsjvdgjcnbtfksqhquiwnwflkldgdrqrnwmshdpykicozfowmumzeuznolmgjlltypyufpzjpuvucmesnnrwppheizkapovoloneaxpfinaontwtdqsdvzmqlgkdxlbeguackbdkftzbnynmcejtwudocemcfnuzbttcoew"
 
 
-class Node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
+# s = 'bbbab'
 
 
-class LinkedList:
-    def __init__(self):
-        self.root = None
+def subsequnces(string):
+    res = ['']
+    palin = ''
+    for char in string:
+        curr_res = []
+        for sub in res:
+            seq = char + sub
+            curr_res.append(seq)
+            # if seq == seq[::-1]:
+            #     palin = max(palin, seq, key=len)
+        res = res + curr_res
 
-    def append(self, data):
-        node = Node(data)
-        if not self.root:
-            self.root = node
+    return res
+
+
+# print(subsequnces(s))
+
+def get_all_subsequence(s):
+    dplen = len(s)
+    dp = [[0] * dplen for _ in range(dplen)]
+    for i in range(dplen)[::-1]:
+        dp[i][i] = 1
+        for j in range(i + 1, dplen):
+            if s[i] == s[j]:
+                dp[i][j] = 2 + dp[i + 1][j - 1]
+            else:
+                dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])
+    return dp[0][-1]
+
+
+# n = input()
+
+print(get_all_subsequence(s))
+
+"""
+Longest Increasing Subsequence
+"""
+
+nums = [10, 9, 2, 5, 3, 7, 101, 18]
+nums = [4, 2, 1, 4, 3, 4, 5, 8, 15]
+
+
+def lengthOfLTS(nums):
+    dplen = len(nums)
+    dp = [[x] for x in nums]
+
+    for i in range(1, dplen):
+        maxi, curr = 0, None
+        for j in range(i):
+            diff = nums[i] - max(dp[j])
+            if 0< diff <= 3 and len(dp[j]) > maxi:
+                maxi, curr = len(dp[j]), j
+        if curr is not None:
+            dp[i].extend(dp[curr])
+
+    return max(dp, key=len)[::-1]
+
+
+print(lengthOfLTS(nums))
+
+
+def lengthOfLTS(nums):
+    dplen = len(nums)
+    dp = [0] * dplen
+    dp[0] = 1
+    for i in range(1, dplen):
+        maxi = 0
+        for j in range(0, i):
+            if nums[i] > nums[j]:
+                maxi = max(maxi, dp[j])
+        dp[i] = 1 + maxi
+    return max(dp)
+
+
+def substring(string):
+    length = len(string)
+    window = length
+    res = []
+    while window > 0:
+        offset = 0
+        while window + offset <= length:
+            sub = string[offset:window + offset]
+            if sub == sub[::-1]:
+                res.append(sub)
+            offset += 1
+        window -= 1
+
+    return res
+
+
+# print(substring(s))
+
+"""
+Reverse a string
+"""
+string = "AlgoExpert is the best!"
+
+
+def reverseWordsInString(string):
+    arr = string.split(" ")
+    left, right = 0, len(arr) - 1
+    while left < right and left < (left + right) / 2:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
+
+    return " ".join(arr)
+
+
+print(reverseWordsInString(string))
+
+"""
+32. Longest Valid Parentheses
+"""
+s = ")(()))"
+
+
+def longestValidParentheses(s):
+    res = 0
+    stack = []
+    stack.append(-1)
+    for st in range(len(s)):
+        if s[st] == '(':
+            stack.append(st)
         else:
-            current = self.root
-            while current.next:
-                current = current.next
-            current.next = node
-
-    def prepend(self, data):
-        node = Node(data)
-        if not self.root:
-            self.root = node
-        else:
-            node.next, self.root = self.root, node
-
-    def insert(self, data, after):
-        node = Node(data)
-        if not self.root:
-            self.root = node
-        else:
-            current = self.root
-            while current.next:
-                if current.data == after:
-                    break
-                current = current.next
-            node.next = current.next
-            current.next = node
-
-    def pop(self, position=None):
-        current = self.root
-        prev = current
-        if not position:
-            while current:
-                prev = current
-                current = current.next
-            prev.next = None
-        else:
-            self.root = self.root.next
-    def print_ll(self):
-        res = []
-        current = self.root
-        while current:
-            res.append(current.data)
-            current = current.next
-        return res
+            stack.pop()
+            if len(stack) == 0:
+                stack.append(st)
+            res = max(res, st - stack[-1])
+    return res
 
 
-pl = [5, 6, 7]
-link = LinkedList()
-for l in ll:
-    link.prepend(l)
-    link.append(l)
-
-for p in pl:
-    link.insert(p, 1)
-
-link.pop()
-link.pop()
-link.pop()
-link.pop(1)
-link.pop(1)
-
-
-print(link.print_ll())
+print(longestValidParentheses(s))

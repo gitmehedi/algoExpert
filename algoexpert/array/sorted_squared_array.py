@@ -37,3 +37,16 @@ def sortedSquaredArray(array):
 
 
 print(sortedSquaredArray(array))
+
+nums = [3, 2, 2, 3]
+val = 3
+
+
+def removeElement(nums, val):
+    for k in range(len(nums)):
+        if nums[k] == val:
+            nums.pop(k)
+    return nums
+
+
+print(removeElement(nums, val))
