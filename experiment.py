@@ -1,18 +1,23 @@
 """
 
 """
-nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+prices = [7, 1, 5, 3, 6, 4]
 
 
-def removeDuplicates(nums):
-    left, right = 0, 1
-    while left < right and right < len(nums):
-        if nums[left] == nums[right]:
-            del nums[left]
-        else:
-            left += 1
-            right += 1
-    return nums
+def maxProfit(prices):
+    buy = prices[0]
+    sell = prices[0]
+    profit = sell - buy
+    for price in prices:
+        if price < buy:
+            buy = price
+            sell = price
+        if price > sell:
+            sell = price
+        if sell - buy > profit:
+            profit = sell - buy
+
+    return profit
 
 
-print(removeDuplicates(nums))
+print(maxProfit(prices))
